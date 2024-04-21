@@ -1,0 +1,66 @@
+.title {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  
+  img{
+    margin-top: 1rem;
+  }
+}
+
+.badge {
+  position: absolute;
+  background-color: rgb(253, 93, 19);
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.btn-container {
+  button {
+    border: 1px solid #8644e4;
+    background-color: #8644e4;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 10px;
+  }
+
+  button:last-child {
+    margin-right: 0; 
+  }
+
+  button:hover {
+    border: 1px solid #ae80ee;
+    background-color: #ae80ee;
+    color: #ffffff;
+    padding: 5px 10px;
+  }
+}
+
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap:1rem;
+
+  button{
+    border-radius:15px
+  }
+}

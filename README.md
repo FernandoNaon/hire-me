@@ -1,77 +1,48 @@
-# Interested in working for Famly?
 
-Give us a chance to see your beautiful code! 🤩
+## Famly-frontend
 
-## How to get started
-- Fork this repository
-- Create a small application in React (or another agreed upon framework)
-- Describe your design decisions and setup instructions in the README.md of the forked repository
+Welcome to the Famly app. This application is designed to help nurseries manage the attendance of children each day. It provides functionality to list children, check them in, and check them out.
 
-## The assignment
-You are tasked to build a simple application for a nursery to manage the attendance of children each day.
 
-The application should be able to do 3 things:
-1. List children with some form of pagination/lazy-loading/infinite-scroll
-2. Checkin a child
-3. Checkout a child
+#### Getting Started
 
-Don't worry about design or anything like that.
+To get started with this application, you'll need to fork this repository and set up the frontend codebase. You will also need the access token provided to you via email to access the Famly API.
 
-If you have any questions feel free to reach out to the person who sent you the assignment ☺️
+### Setup Instructions
 
-## API Specification
-
-You have received an access token in the email that contained the link to this page.
-
-### Fetch some children from
-
-The API does not support any limit or offset, so the pagination/lazy-loading/infinite-scroll will have to be done client-side only.
-
-```
-GET https://app.famly.co/api/daycare/tablet/group
-Arguments: {
-	accessToken: <accessToken>,
-	groupId: '86413ecf-01a1-44da-ba73-1aeda212a196',
-	institutionId: 'dc4bd858-9e9c-4df7-9386-0d91e42280eb'
-}
-```
-
-Example in cURL:
+1. Clone the repository
 
 ```bash
-curl "https://app.famly.co/api/daycare/tablet/group?accessToken=<accessToken>&groupId=86413ecf-01a1-44da-ba73-1aeda212a196&institutionId=dc4bd858-9e9c-4df7-9386-0d91e42280eb"
+git clone https://github.com/FernandoNaon/famly-frontend.git
 ```
 
-### Checkin child
-```
-POST https://app.famly.co/api/v2/children/<childId>/checkins
-
-Arguments: {
-	accessToken: <accessToken>
-	pickupTime: 16:00
-}
-```
-
-Example in cURL:
+2. Install dependencies
 
 ```bash
-curl \
-  -d 'accessToken=<accessToken>&pickupTime=16:00' \
-  https://app.famly.co/api/v2/children/fcd683d0-bc31-468c-948f-1ca70b91439d/checkins
+cd famly-frontend
+npm install
 ```
 
-### Checkout child
-```
-POST https://app.famly.co/api/v2/children/<childId>/checkout
-Arguments: {
-	accessToken: <accessToken>
-}
-```
-
-Example in cURL:
+3. Set Up Environment Variables: Create a .env file in the root of the project and add your access token:
 
 ```bash
-curl \
-  -d 'accessToken=<accessToken>' \
-  https://app.famly.co/api/v2/children/fcd683d0-bc31-468c-948f-1ca70b91439d/checkout
+VITE_API_KEY=your-access-token
 ```
+
+4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+
+### Usage
+
+Once the application is running, you can perform the following actions:
+
+ - List Children: View a list of children with pagination.
+
+- Checkin a Child: Check a child into the nursery by clicking the "Checkin" button.
+
+- Checkout a Child: Check a child out of the nursery by clicking the "Checkout" button.
+
